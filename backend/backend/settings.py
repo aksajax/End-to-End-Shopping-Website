@@ -52,6 +52,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -127,6 +128,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -158,3 +160,5 @@ SIMPLE_JWT = {
 # settings.py ke bottom mein add karo:
 RAZORPAY_KEY_ID = "rzp_test_SqjSwSJGJb12E9  "      # Apni real Test Key ID yahan daalna
 RAZORPAY_KEY_SECRET = "3QbFO8R2wQrpXfj80Ekqw7RB"  # Apna real Secret Key yahan daalna
+
+ALLOWED_HOSTS = ['*']
