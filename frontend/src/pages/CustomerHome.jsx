@@ -412,7 +412,11 @@ const CustomerHome = () => {
 
                             <div className="flex space-x-3 pt-2">
                                 <button type="button" onClick={() => setShowBuyModal(false)} className="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-2.5 rounded-xl text-xs uppercase tracking-wider transition">Cancel</button>
-                                <button type="submit" className="flex-1 bg-gradient-to-r from-orange-500 to-rose-500 hover:opacity-95 text-white font-bold py-2.5 rounded-xl text-xs tracking-wider uppercase transition shadow-md shadow-orange-500/20 active:scale-98">Confirm & Buy</button>
+                                <button type="submit" disabled={isOutOfStock}
+                                                onClick={() => {
+                                                    addToCart(product);
+                                                    toast.success("Item cart mein add ho gaya! 🛒");
+                                                }} className="flex-1 bg-gradient-to-r from-orange-500 to-rose-500 hover:opacity-95 text-white font-bold py-2.5 rounded-xl text-xs tracking-wider uppercase transition shadow-md shadow-orange-500/20 active:scale-98">Confirm & Buy</button>
                             </div>
                         </form>
                     </div>
