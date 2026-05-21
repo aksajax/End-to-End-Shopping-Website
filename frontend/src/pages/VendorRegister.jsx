@@ -33,7 +33,8 @@ const VendorRegister = () => {
 
         try {
             // 1. Register the Vendor
-            const regResponse = await axios.post('http://127.0.0.1:8000/api/auth/register/', {
+            // const regResponse = await axios.post('http://127.0.0.1:8000/api/auth/register/', {
+            const regResponse = await axios.post('https://end-to-end-shopping-website.onrender.com/api/auth/register/', {
                 email: formData.email,
                 password: formData.password,
                 first_name: formData.first_name,
@@ -44,7 +45,8 @@ const VendorRegister = () => {
             toast.success("Account successfully ban gaya! Logging you in...");
 
             // 2. Registration ke turant baad automatic login flow
-            const loginResponse = await axios.post('http://127.0.0.1:8000/api/auth/login/', {
+            // const loginResponse = await axios.post('http://127.0.0.1:8000/api/auth/login/', {
+            const loginResponse = await axios.post('https://end-to-end-shopping-website.onrender.com/api/auth/login/', {
                 email: formData.email,
                 password: formData.password
             });

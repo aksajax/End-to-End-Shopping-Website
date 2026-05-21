@@ -155,7 +155,8 @@ const VendorDashboard = () => {
 
       // 2. Request bhejo headers ke saath
       await axios.patch(
-        `http://127.0.0.1:8000/api/products/orders/${orderId}/`, 
+        // `http://127.0.0.1:8000/api/products/orders/${orderId}/`, 
+        `https://end-to-end-shopping-website.onrender.com/api/products/orders/${orderId}/`, 
         { status: newStatus }, // Request Body
         {
           headers: {

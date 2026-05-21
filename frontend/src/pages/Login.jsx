@@ -38,7 +38,8 @@ const Login = () => {
     const handleLogin = async (e) => {
         if (e) e.preventDefault();
         try {
-            const response = await axios.post('http://127.0.0.1:8000/api/auth/login/', { email, password });
+            const response = await axios.post('https://end-to-end-shopping-website.onrender.com/api/auth/login/', { email, password });
+            // const response = await axios.post('http://127.0.0.1:8000/api/auth/login/', { email, password });
             const { access, user } = response.data;
             
             // Local storage inside application shell updates

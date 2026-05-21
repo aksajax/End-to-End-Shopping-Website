@@ -24,7 +24,8 @@ const AdminDashboard = () => {
     const [editId, setEditId] = useState(null);
 
     const navigate = useNavigate();
-    const BACKEND_URL = "http://127.0.0.1:8000"; 
+    // const BACKEND_URL = "http://127.0.0.1:8000"; 
+    const BACKEND_URL = "https://end-to-end-shopping-website.onrender.com"; 
 
     // --- 1. Centralized Data Sync Station & Cross-Reference Mapping Engine ---
     const loadAdminData = async () => {

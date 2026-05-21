@@ -32,7 +32,8 @@ const UserRegister = () => {
             role: 'CUSTOMER' // 'USER' ko badal kar 'CUSTOMER' kar diya jo Meesho models mein common hai
         };
 
-        await axios.post('http://127.0.0.1:8000/api/auth/register/', payload);
+        await axios.post('https://end-to-end-shopping-website.onrender.com/api/auth/register/', payload);
+        // await axios.post('http://127.0.0.1:8000/api/auth/register/', payload);
         toast.success("🎉 Account successfully create ho gaya! Ab aap login kar sakte hain.");
         navigate('/login');
         
@@ -53,7 +54,8 @@ const UserRegister = () => {
                     password: password
                     // role field poori tarah hata diya taaki Django apna default set kare
                 };
-                await axios.post('http://127.0.0.1:8000/api/auth/register/', backupPayload);
+                await axios.post('https://end-to-end-shopping-website.onrender.com/api/auth/register/', backupPayload);
+                // await axios.post('http://127.0.0.1:8000/api/auth/register/', backupPayload);
                 toast.success("🎉 Account successfully create ho gaya (Default Role)!");
                 navigate('/login');
                 return;

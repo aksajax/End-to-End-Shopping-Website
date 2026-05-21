@@ -27,7 +27,8 @@ const CustomerHome = () => {
     const [shippingAddress, setShippingAddress] = useState('');
 
     // Django Media Backend Base URL Handle karne ke liye
-    const BACKEND_BASE_URL = 'http://127.0.0.1:8000';
+    const BACKEND_BASE_URL = 'https://end-to-end-shopping-website.onrender.com';
+    // const BACKEND_BASE_URL = 'http://127.0.0.1:8000';
 
     // Fetch Database Products and Categories
     const loadStoreData = async () => {

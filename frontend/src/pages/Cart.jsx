@@ -36,7 +36,8 @@ const Cart = () => {
                     <div className="flex items-center space-x-4">
                       {item.image && (
                         <img 
-                          src={item.image.startsWith('http') ? item.image : `http://127.0.0.1:8000${item.image}`} 
+                          src={item.image.startsWith('http') ? item.image : `https://end-to-end-shopping-website.onrender.com${item.image}`} 
+                          // src={item.image.startsWith('http') ? item.image : `http://127.0.0.1:8000${item.image}`} 
                           className="w-16 h-16 object-contain border bg-white p-1 rounded-sm" 
                           alt={item.name} 
                         />
